@@ -1,0 +1,20 @@
+appId: com.example.sheetrepro
+---
+- launchApp:
+    clearState: true
+- tapOn:
+    id: navigate
+- assertVisible:
+    id: tap
+- tapOn:
+    id: tap
+- assertVisible: 'Taps: 1'
+- tapOn:
+    id: open
+- assertVisible: Sheet content
+- tapOn:
+    id: close
+- assertNotVisible: Sheet content
+- tapOn:
+    id: tap
+- assertVisible: 'Taps: 2'
