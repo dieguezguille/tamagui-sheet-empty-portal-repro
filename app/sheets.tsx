@@ -24,12 +24,12 @@ export default function Sheets() {
 
       <Sheet modal open={open} onOpenChange={setOpen} unmountChildrenWhenHidden snapPointsMode="fit">
         <Sheet.Overlay />
-        <Sheet.Frame padding="$4" gap="$4" paddingBottom="$8">
+        <Sheet.Container padding="$4" gap="$4" paddingBottom="$8">
           <Paragraph>Sheet content</Paragraph>
           <Button testID="close" onPress={() => setOpen(false)}>
             Close sheet
           </Button>
-        </Sheet.Frame>
+        </Sheet.Container>
       </Sheet>
     </>
   )
@@ -39,9 +39,9 @@ function ClosedSheet() {
   return (
     <Sheet modal open={false} unmountChildrenWhenHidden>
       <Sheet.Overlay />
-      <Sheet.Frame>
+      <Sheet.Container>
         <Paragraph>Never shown</Paragraph>
-      </Sheet.Frame>
+      </Sheet.Container>
     </Sheet>
   )
 }

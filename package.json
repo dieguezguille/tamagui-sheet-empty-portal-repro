@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "expo-router/entry",
   "dependencies": {
-    "@tamagui/config": "2.7.7",
+    "@tamagui/config": "3.0.0-beta.1479.1",
     "expo": "~57.0.25",
     "expo-constants": "~57.0.19",
     "expo-linking": "~57.0.11",
@@ -13,7 +13,7 @@
     "react-native": "0.86.3",
     "react-native-safe-area-context": "~5.7.0",
     "react-native-screens": "~4.26.2",
-    "tamagui": "2.7.7"
+    "tamagui": "3.0.0-beta.1479.1"
   },
   "devDependencies": {
     "@react-native/jest-preset": "0.86.3",
@@ -35,6 +35,9 @@
   "private": true,
   "jest": {
     "preset": "jest-expo/ios",
+    "transform": {
+      "\\.mjs$": "babel-jest"
+    },
     "transformIgnorePatterns": [
       "node_modules/(?!(\\.pnpm|react-native|@react-native|expo|@expo|tamagui|@tamagui)(/|-|$))"
     ]
